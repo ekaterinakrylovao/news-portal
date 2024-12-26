@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: newspaper-backend
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+    volumes:
+      - ./backend/uploads:/uploads
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: newspaper-frontend
+    ports:
+      - "5173:80" # Прокидываем порт 5173 на 80 порт внутри контейнера
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:16.2
+    container_name: newspaper-db
+    environment:
+      POSTGRES_USER: <your-postgres-username>
+      POSTGRES_PASSWORD: <your-postgres-password>
+      POSTGRES_DB: news_portal
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./backend/pgdata:/var/lib/postgresql/data

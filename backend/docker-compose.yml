@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  newspaper-backend:
+    build: .
+    container_name: newspaper-backend
+    ports:
+      - "8081:8081"
+    depends_on:
+      - newspaper-db
+    volumes:
+      - ./uploads:/uploads
+
+  newspaper-db:
+    image: postgres:16.2
+    container_name: newspaper-db
+    environment:
+      POSTGRES_USER: <your-postgres-username>
+      POSTGRES_PASSWORD: <your-postgres-password>
+      POSTGRES_DB: news_portal
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data

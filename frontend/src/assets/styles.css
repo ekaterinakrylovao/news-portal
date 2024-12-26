@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+	font-family: 'Georgia', serif;
+    background-color: #f4f4f9; /* Светлый нейтральный фон */
+    color: #333333; /* Темный текст для читабельности */
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+    padding: 3px;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+.header {
+    background-color: #3f4a59; /* Благородный тёмный фон */
+    color: #ffffff; /* Белый текст */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    gap: 15px; /* Пространство между текстом и кнопкой */
+    align-items: center;
+    font-size: 16px; /* Компактный размер шрифта */
+}
+
+.auth-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-button.login-button {
+    background-color: #6d83a3; /* Цвет кнопки входа */
+    color: #ffffff;
+}
+
+.auth-button.logout-button {
+    background-color: #8b5742; /* Цвет кнопки выхода */
+    color: #ffffff;
+}
+
+.auth-button:hover {
+    background-color: #5a708d; /* Лёгкий эффект при наведении */
+}
+
+.auth-button.login-button:hover {
+    background-color: #567391;
+}
+
+.auth-button.logout-button:hover {
+    background-color: #7b4f3b;
+}
+
+.articles {
+    max-width: 800px;
+    margin: 20px auto; /* Центрируем и ограничиваем ширину */
+    padding: 10px;
+    background-color: #ffffff; /* Белый фон карточек статей */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.article-card {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.article-card h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #283593;
+}
+
+.article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.expand-button {
+    background-color: #283593;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.expand-button:hover {
+    background-color: #1a237e; /* Темнее при наведении */
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.actions button.liked {
+    color: #d32f2f; /* Красный для лайка */
+}
+
+.publication-date {
+    font-size: 0.8em;
+    color: #757575;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eceff1; /* Нейтральный светло-серый фон */
+}
+
+.auth-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.auth-box input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.auth-box button {
+    background-color: #283593;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-box button:hover {
+    background-color: #1a237e;
+}
+
+.auth-box .redirect {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #283593;
+}
+
+.comments {
+    background-color: #f4f4f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comments h3 {
+    font-size: 1.2em;
+    color: #283593;
+}
+
+.comments textarea {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comments button {
+    background-color: #283593;
+    color: #ffffff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
