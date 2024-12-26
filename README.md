@@ -24,6 +24,11 @@
 
 Перед запуском измените значения на свои в файлах `\backend\src\main\resources\application.properties` и `docker-compose.yml` и `\backend\docker-compose.yml`.
 
+Также, требуется выполнить следующее, чтобы у нас была `\target` для работы `Dockerfile`:
+```bash
+cd backend
+mvn clean package -DskipTests
+```
 
 ### Запуск
 
