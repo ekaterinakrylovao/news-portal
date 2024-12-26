@@ -32,3 +32,16 @@ services:
       - "5432:5432"
     volumes:
       - ./backend/pgdata:/var/lib/postgresql/data
+
+  initializer:
+    build:
+      context: .
+    container_name: post-article-initializer
+    depends_on:
+      - backend
+    volumes:
+      - ./post_requests.py:/post_requests.py
+      - ./wait-for-it.sh:/wait-for-it.sh
+      - ./backend/uploads:/uploads # Добавлено монтирование папки с изображениями
+    restart: "no"
+    command: ["/wait-for-it.sh", "newspaper-backend:8081", "--", "python", "/post_requests.py"]
