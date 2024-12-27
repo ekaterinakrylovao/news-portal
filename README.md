@@ -129,7 +129,7 @@ mvn clean package -DskipTests
 
 - Получение новостей: `GET /articles`
 
-![Снимок экрана 2024-12-26 154102](https://github.com/user-attachments/assets/6d308d71-3d10-44b6-941a-4cb2d5bf0f0d)
+![Снимок экрана 2024-12-27 043722](https://github.com/user-attachments/assets/bc1d2dcf-d64d-4b0e-bc9e-2a6bbabb5661)
 
 - Создание новости: `POST /articles`
 
@@ -137,7 +137,7 @@ mvn clean package -DskipTests
 
 - Получение комментариев для статьи: `GET /comments/article/{articleId}`
 
-![Снимок экрана 2024-12-26 175715](https://github.com/user-attachments/assets/64be7d7e-81a0-4cc6-8c64-59ac3190f214)
+![Снимок экрана 2024-12-27 043445](https://github.com/user-attachments/assets/2739c27e-08ce-401e-a997-6cf778e6dedf)
 
 - Добавление комментария: `POST /comments?articleId={articleId}`
 
