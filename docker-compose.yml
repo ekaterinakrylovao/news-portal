@@ -45,3 +45,7 @@ services:
       - ./backend/uploads:/uploads # Добавлено монтирование папки с изображениями
     restart: "no"
     command: ["/wait-for-it.sh", "newspaper-backend:8081", "--", "python", "/post_requests.py"]
+
+networks:
+  default:
+    driver: bridge
